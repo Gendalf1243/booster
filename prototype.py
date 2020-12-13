@@ -1,14 +1,30 @@
-import math
-M = [9000]
-m = 127
-W = 2050
-p1 = 0.5
-p2 = 1
-step = 0
-S = math.pi * (1.65 ** 2) * 0.25
-while M[step] >= 0:
-    P = W * m + S * (p1 - p2)
-    M_new = M[step] - m
-    M.append(M_new)
-    step += 1
-    print(M_new)
+# m = int(input())
+# n = int(input())
+# t = 1
+# a = 0
+# max = -1
+# while m > 0:
+#     b = m % n
+#     a += b * t
+#     t = t * 10
+#     m = m // n
+#     if b % 10 > max:
+#      max = b
+# print(max)
+m = int(input())
+n = 2
+t = 1
+a = 0
+c = 0
+d = 0
+while m > 0:
+    b = m % n
+    a += b * t
+    t = t * 10
+    m = m // n
+    if b == 1:
+        c +=1
+    else:
+        d += 1
+print(c)
+print(d)

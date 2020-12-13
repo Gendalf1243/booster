@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 S = math.pi * (0.1 ** 2)
 g = 9.81
 m = 85
-C = 1
+C = 13
 dt = 0.0001
 speed = [85]
 teta = [45]

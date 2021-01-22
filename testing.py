@@ -20,6 +20,8 @@ density = [1.225 * math.exp(-1 * height[0] / 10000)]
 P = W * m + S_sopla * (p_S - p_Atm)
 
 while height[step] >= 0 and  Massa[step] >= 3500:
+
+
     forceAero = -0.5 * C * S_middle * density[step] * (speed[step] ** 2)
     forceG = -g * Massa[step] * math.sin(teta[step])
     density_new = 1.225 * math.exp(-1 * height[step] / 10000)
@@ -31,6 +33,9 @@ while height[step] >= 0 and  Massa[step] >= 3500:
         teta_new = teta[step] - (-g * Massa[step] * math.cos(teta[step])) / (Massa[step] * speed[step]) * dt
     dist_new = dist[step] + speed[step] * dt * math.sin(teta[step])
     height_new = height[step] + speed[step] * dt * math.cos(teta[step])
+
+
+
     dist.append(dist_new)
     Massa.append(M_new)
     height.append(height_new)
@@ -38,6 +43,9 @@ while height[step] >= 0 and  Massa[step] >= 3500:
     teta.append(teta_new)
     density.append(density_new)
     step += 1
+
+
+
 def create_plot(title, xl, yl, x, y):
     plt.title(title)
     plt.xlabel(xl)
